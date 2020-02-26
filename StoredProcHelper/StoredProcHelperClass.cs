@@ -10,10 +10,12 @@ using System.Threading.Tasks;
 namespace StoredProcHelper
 {
     /// <summary>
-    /// Stored proc helper class for a more generic way of dealing with ExecuteSqlRaw
+    /// Stored proc helper class for a more generic way of dealing with ExecuteSqlRaw.
+    /// Register with DI in Startup.cs 
     /// </summary>
     public class StoredProcHelperClass : IStoredProcHelper
-    {
+    {        
+        // Change to your db context
         private readonly ProjectDbContext _db;
 
         public StoredProcHelperClass(ProjectDbContext db)
@@ -71,7 +73,7 @@ namespace StoredProcHelper
 
             foreach (var res in noteParams)
             {
-                if(res.Key.Contains(" "))
+                if(res.Key.Contains(' '))
                 {
                     sqlParam.Add(new SqlParameter($"@{res.Key}", res.Value));
 

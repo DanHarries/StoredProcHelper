@@ -3,6 +3,9 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AssemblyName>StoredProcHelper</AssemblyName>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Company>SDL Group</Company>
+    <Authors>Dan Harries</Authors>
   </PropertyGroup>
 
   <ItemGroup>
