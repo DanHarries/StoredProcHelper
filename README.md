@@ -7,3 +7,4 @@ then pass the name of the sp to the helper class, and it will take care of every
 
 ### Roadmap
 - [ ] Implement method for when using a dataset to execute stored proc.
+- [ ] Make into a nuget
